@@ -13,31 +13,28 @@ color: #ff0000;
 }
 /* Navbar */
 .navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 1rem 5%;
-background-color: white;
-color: rgb(55, 53, 202);
-position: sticky;
-top: 0;
-z-index: 1000;
+  background-color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 .nav-links {
-display: flex;
-list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
 }
-.nav-links li {
-margin: 0 15px;
-}
+
 .nav-links a {
-color:blueviolet;
-text-decoration: none;
-font-weight: 500;
-transition: color 0.3s;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+  transition: 0.3s;
 }
+
 .nav-links a:hover {
-color: #3498db;
+  color: black;
 }
 /* Barra de Pesquisa */
 .search-container {
@@ -45,17 +42,17 @@ display: flex;
 }
 .search-container input {
 padding: 8px 12px;
-border: 2px solid #C8A2C8; /* Cor Lilás na borda */
+border: 2px solid #ff0000; /* Cor Lilás na borda */
 background-color: #F3E5F5; /* Um lilás bem clarinho no fundo */
 border-radius: 4px 0 0 4px;
 outline: none;
 transition: border-color 0.3s;
-border-color: #9370DB; /* Lilás mais escuro ao clicar */
+border-color: #ff0000; /* Lilás mais escuro ao clicar */
 }
 .search-container button {
 padding: 8px 15px;
 border: none;
-background-color: #9370DB; /* Botão em tom de lilás médio */
+background-color: #ff0000; /* Botão em tom de lilás médio */
 color: white;
 cursor: pointer;
 border-radius: 0 4px 4px 0;
