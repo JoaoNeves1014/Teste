@@ -43,7 +43,7 @@ display: flex;
 .search-container input {
 padding: 8px 12px;
 border: 2px solid #ff0000; /* Cor Lilás na borda */
-background-color: #F3E5F5; /* Um lilás bem clarinho no fundo */
+background-color: #ffffff; /* Um lilás bem clarinho no fundo */
 border-radius: 4px 0 0 4px;
 outline: none;
 transition: border-color 0.3s;
