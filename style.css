@@ -95,6 +95,16 @@ width: 100%;
 height: 180px;
 background-color: #ddd; /* Cor de fundo enquanto não há imagem */
 }
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+card-image img {
+  width: 200%;
+  height: 100%;
+  object-fit: contain;
+}
 .card h3 {
 padding: 15px;
 font-size: 1.1rem;
