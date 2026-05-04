@@ -74,5 +74,23 @@ h2 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+.botao-primario:hover {
+    background-color: red;
+}
+
+/* Botão secundário (voltar) */
+.botao-secundario {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.botao-secundario:hover {
+    color: #000;
+}
 .input-erro { border-color: #ff5252 !important; }
 .input-sucesso { border-color: #4caf50 !important; }
