@@ -1,96 +1,160 @@
+:root {
+    --primary: #ff0000;
+    --dark-bg: #121212;
+    --card-bg: #ffffff;
+    --text-main: #1a1a1a;
+    --text-soft: #666;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: red; 
+    /* Gradiente escuro com toque de vermelho para um ar mais 'automotivo' */
+    background: radial-gradient(circle at center, #250000 0%, #0a0a0a 100%);
+    height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+
+.centralizar-tela {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 .caixa {
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    width: 350px; 
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 0.5s ease-out;
 }
 
-h2 {
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header-caixa {
     text-align: center;
-    margin-bottom: 25px;
-    color: #333;
-    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.header-caixa h2 {
+    font-size: 2rem;
+    color: var(--text-main);
+    font-weight: 800;
+}
+
+.header-caixa p {
+    color: var(--text-soft);
+    font-size: 0.9rem;
 }
 
 .grupo-input {
     margin-bottom: 20px;
 }
 
-.grupo-input label {
-    display: block;
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 8px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #555;
+}
+
+.grupo-input label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.esqueci-senha {
+    font-size: 0.8rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .grupo-input input {
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px; 
+    padding: 14px 16px;
+    border: 2px solid #eee;
+    border-radius: 12px;
     outline: none;
     transition: all 0.3s ease;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
-
 .grupo-input input:focus {
-    border-color: red;
-    box-shadow: 0 0 5px rgba(211, 47, 47, 0.2);
+    border-color: var(--primary);
+    background-color: #fff8f8;
 }
 
 .botao-primario {
     width: 100%;
-    padding: 12px;
-    background-color: #333;
+    padding: 15px;
+    background-color: var(--primary);
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 10px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .botao-primario:hover {
-    background-color: #000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    background-color: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
 }
 
-.botao-primario:hover {
-    background-color: red;
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    color: #ccc;
+    font-size: 0.8rem;
+    position: relative;
 }
 
-/* Botão secundário (voltar) */
 .botao-secundario {
     display: block;
     text-align: center;
-    margin-top: 10px;
     text-decoration: none;
-    color: #555;
-    font-size: 14px;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    font-weight: 500;
     transition: 0.2s;
 }
 
 .botao-secundario:hover {
-    color: #000;
+    color: var(--text-main);
 }
-.input-erro { border-color: #ff5252 !important; }
-.input-sucesso { border-color: #4caf50 !important; }
+
+.footer-caixa {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-soft);
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.footer-caixa a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}

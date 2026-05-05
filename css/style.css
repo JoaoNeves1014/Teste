@@ -1,130 +1,285 @@
+:root {
+    --primary: #ff0000;
+    --dark: #111;
+    --light-grey: #f4f4f4;
+    --text-dark: #333;
+    --transition: 0.3s ease;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--light-grey);
+    color: var(--text-dark);
 }
 
-/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #111;
+    background: var(--dark);
     color: white;
-    padding: 15px 5%;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .logo h1 {
-    color: #ff0000;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.logo .br-green {
+    color: #009c3b; 
+}
+
+.logo .br-yellow {
+    color: #ffdf00; 
 }
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     list-style: none;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: white;
-    transition: 0.3s;
+    color: #ccc;
+    font-weight: 500;
+    transition: var(--transition);
 }
 
 .nav-links a:hover {
-    color: #ff0000;
+    color: var(--primary);
 }
-
-/* AÇÕES (busca + botão) */
 .actions {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .search-container {
     display: flex;
+    background: #222;
+    border-radius: 20px;
+    padding: 5px 15px;
+    border: 1px solid #333;
 }
 
 .search-container input {
-    padding: 6px;
+    background: transparent;
     border: none;
+    color: white;
     outline: none;
+    padding: 5px;
+    width: 150px;
 }
 
 .search-container button {
-    background: #ff0000;
-    color: white;
+    background: transparent;
     border: none;
-    padding: 6px 10px;
     cursor: pointer;
+    filter: grayscale(1);
 }
 
-/* BOTÃO CADASTRO */
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-login {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
 .btn-cadastro {
-    background: transparent;
-    border: 2px solid #ff0000;
-    color: #ff0000;
-    padding: 6px 12px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: var(--transition);
+    font-size: 0.9rem;
 }
 
 .btn-cadastro:hover {
-    background: #ff0000;
-    color: white;
+    transform: scale(1.05);
+    filter: brightness(1.2);
 }
 
-/* CONTEÚDO */
 .container {
     max-width: 1200px;
-    margin: 30px auto;
+    margin: 40px auto;
     padding: 0 20px;
 }
 
-.content-section {
-    margin-bottom: 40px;
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
 }
 
 .content-section h2 {
-    margin-bottom: 15px;
-    border-left: 5px solid #ff0000;
-    padding-left: 10px;
+    border-left: 6px solid var(--primary);
+    padding-left: 15px;
+    font-size: 1.8rem;
 }
 
-/* CARDS */
+.ver-mais {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
 .card-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 .card {
     background: white;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
-    width: 250px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    position: relative;
+    cursor: pointer;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--primary);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .card img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
 }
 
+.card-info {
+    padding: 20px;
+}
+
 .card h3 {
-    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Novo Layout em Colunas */
+.main-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.main-content {
+    flex: 3; /* Ocupa 75% do espaço */
+}
+
+.sidebar {
+    flex: 1; /* Ocupa 25% do espaço (Preenche o vazio) */
+    position: sticky;
+    top: 100px; /* Gruda no topo ao rolar */
+}
+
+/* Estilização da Sidebar */
+.sidebar-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.sidebar-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+}
+
+.sidebar-box ul {
+    list-style: none;
+}
+
+.sidebar-box li {
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.sidebar-box a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.sidebar-box a:hover {
+    color: var(--primary);
+}
+
+.sidebar-ad {
+    background: var(--dark);
+    color: white;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
     text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    border: 2px dashed var(--primary);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 900px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
 }

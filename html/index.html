@@ -10,13 +10,13 @@
 
 <header class="navbar">
     <div class="logo">
-        <h1>Projetinhos Brasil</h1>
-    </div>
+    <h1>Projetinhos <span class="br-green">BR</span><span class="br-yellow">ASIL</span></h1>
+</div>
 
     <nav>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="/html/blog.html">Blog</a></li>
             <li><a href="/html/loja.html">Store</a></li>
             <li><a href="#">Projetinhos</a></li>
         </ul>
@@ -25,47 +25,90 @@
     <div class="actions">
         <div class="search-container">
             <input type="text" placeholder="Pesquisar...">
-            <button>Buscar</button>
+            <button>🔍</button>
         </div>
-        <a href="/html/cadastro.html" class="btn-cadastro">Cadastrar</a>
-    </div>
-
-        <a href="/html/login.html" class="btn-cadastro">Logar</a>
+        <div class="auth-buttons">
+            <a href="/html/login.html" class="btn-login">Logar</a>
+            <a href="/html/cadastro.html" class="btn-cadastro">Cadastrar</a>
+        </div>
     </div>
 </header>
 
-<main class="container">
+    <main class="container">
+    <div class="main-layout">
+        <!-- Lado Esquerdo: Conteúdo Principal -->
+        <div class="main-content">
+            <section class="content-section">
+                <div class="section-header">
+                    <h2>Projetos Destaque</h2>
+                </div>
+                <div class="card-grid">
+                    <!-- Seus cards aqui... -->
+                    <div class="card">
+                        <div class="badge">Novo</div>
+                        <img src="/img/ale01.jpg" alt="Caravan Alm"> 
+                        <div class="card-info">
+                            <h3>Caravan do Alemão</h3>
+                            <p>Performance & Estilo</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="/img/Camaro.jfif" alt="Camaro">
+                        <div class="card-info">
+                            <h3>Camaro do ACF</h3>
+                            <p>V8 Custom</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <section class="content-section">
-        <h2>Projetos Destaque</h2>
-        <div class="card-grid">
-            <div class="card">
-                <img src="/img/ale01.jpg" alt="Caravan Alm"> 
-                <h3>Caravan do Alemão</h3>
-            </div>
-
-            <div class="card">
-                <img src="/img/Camaro.jfif" alt="Camaro">
-                <h3>Camaro do ACF</h3>
-            </div>
+            <section class="content-section">
+                <div class="section-header">
+                    <h2>Projetos BodyKit BR</h2>
+                </div>
+                <div class="card-grid">
+                    <!-- Seus cards aqui... -->
+                    <div class="card">
+                        <img src="/img/Opala SS BDKT.jpg" alt="Opala SS">
+                        <div class="card-info">
+                            <h3>Opala SS</h3>
+                            <p>Widebody Concept</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="/img/Chevette BDKT.png" alt="Chevtte Bdkt">
+                        <div class="card-info">
+                            <h3>Chevette Shark</h3>
+                            <p>Track Build</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
 
-    <section class="content-section">
-        <h2>Projetos BodyKit BR</h2>
-        <div class="card-grid">
-            <div class="card">
-                <img src="/img/Opala SS BDKT.jpg" alt="Opala SS">
-                <h3>Opala SS</h3>
+        <!-- Lado Direito: A Sidebar (Onde era o espaço morto) -->
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <h3>Bombando</h3>
+                <ul>
+                    <li><a href="#">Como legalizar Turbo em 2026</a></li>
+                    <li><a href="#">Encontro de Antigos em SP</a></li>
+                    <li><a href="#">Review: Nova FuelTech FT700</a></li>
+                </ul>
             </div>
-
-            <div class="card">
-                <img src="/img/Chevette BDKT.png" alt="Chevtte Bdkt">
-                <h3>Chevette Shark</h3>
-            </div>
+            <div class="sidebar-box build-highlight">
+        <h3>Setup de Hoje</h3>
+        <div class="setup-info">
+            <p><strong>Motor:</strong> 2.0 Forjado</p>
+            <p><strong>Turbina:</strong> .50 Roletada</p>
+            <p><strong>Injeção:</strong> FT 450</p>
+            <hr>
+            <p class="setup-footer">Quer montar um igual?</p>
+            <a href="/html/loja.html" class="btn-setup">Ver Peças na Store</a>
         </div>
-    </section>
-
+    </div>
+        </aside>
+    </div>
 </main>
 
 </body>

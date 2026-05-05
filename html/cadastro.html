@@ -3,40 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Cadastro | Projetinhos Brasil</title>
     <link rel="stylesheet" href="/css/globlal.css">
 </head>
-
 <body>
     <div class="centralizar-tela">
         <div class="caixa">
-            <h2>Cadastro</h2>
+            <div class="header-caixa">
+                <h2>Criar Conta</h2>
+                <p>Junte-se à maior comunidade de projetos do BR.</p>
+            </div>
 
             <form>
                 <div class="grupo-input">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Digite seu email" required>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
                 </div>
 
                 <div class="grupo-input">
                     <label for="senha">Senha</label>
-                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                    <input type="password" id="senha" placeholder="Mínimo 6 caracteres" required>
                 </div>
 
                 <div class="grupo-input">
-                    <label for="senha-rep">Repita a senha</label>
-                    <input type="password" id="senha-rep" placeholder="Repita sua senha" required>
+                    <label for="senha-rep">Repita a Senha</label>
+                    <input type="password" id="senha-rep" placeholder="Confirme sua senha" required>
                 </div>
 
-                <button type="submit" class="botao-primario">
-                    Cadastrar
-                </button>
+                <button type="submit" class="botao-primario">Finalizar Cadastro</button>
 
-                <a href="/html/index.html" class="botao-secundario">
-                    ← Voltar para Home
+                <div class="divider">ou</div>
+
+                <a href="index.html" class="botao-secundario">
+                    ← Voltar para a Home
                 </a>
             </form>
+            
+            <div class="footer-caixa">
+                Já possui uma conta? <a href="login.html">Fazer Login</a>
+            </div>
         </div>
-    </div>
+    </div> 
 </body>
 </html>
